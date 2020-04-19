@@ -14,7 +14,7 @@ class TransactionsRepository extends Repository<Transaction> {
     const income = await (
       await this.find({ where: { type: 'income' } })
     ).reduce(
-      (acumalator: number, transaction) => acumalator + transaction.value,
+      (acumulator: number, transaction) => acumulator + transaction.value,
       0,
     );
 
